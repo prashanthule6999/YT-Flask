@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Calculator</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- ✅ CSS must be inside head -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="home-bg">
+
+<div class="card"> <!-- ✅ changed from container to match CSS -->
+    <h1>🎓 Result Calculator</h1>
+
+    <form action="/submit" method="POST">
+        <div class="input-group">
+            <label>Science Marks</label>
+            <input type="number" name="science" step="any" required>
+        </div>
+
+        <div class="input-group">
+            <label>Maths Marks</label>
+            <input type="number" name="maths" step="any" required>
+        </div>
+
+        <div class="input-group">
+            <label>C Programming Marks</label>
+            <input type="number" name="c" step="any" required>
+        </div>
+
+        <div class="input-group">
+            <label>Data Science Marks</label>
+            <input type="number" name="datascience" step="any" required>
+        </div>
+
+        <button type="submit">Calculate Result</button>
+    </form>
+</div>
+
+</body>
+</html>
