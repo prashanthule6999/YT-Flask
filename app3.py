@@ -22,6 +22,8 @@ def fail(score):
 @app.route('/submit', methods=['GET','POST'])
 def submit():
     if request.method == 'GET':
+        return render_template('index.html')
+    else:
         total_score = 0
         science = float(request.form['science'])
         maths = float(request.form['maths'])
